@@ -8,6 +8,8 @@ This example is based on [Camunda Modeler Plugin Example](https://github.com/cam
 
 * Renders Robot Framework icon for service tasks with `robot` in their task id (case insensitive).
 
+![Service Task with Robot Framework icon](plugin.gif)
+
 ## Development Setup
 
 Use [npm](https://www.npmjs.com/), the [Node.js](https://nodejs.org/en/) package manager to download and install required dependencies:
