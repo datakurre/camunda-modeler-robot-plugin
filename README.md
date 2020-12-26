@@ -1,9 +1,12 @@
-# Camunda Modeler Plugin Example
+# Camunda Modeler Robot Framework Plugin
 
 [![Compatible with Camunda Modeler version 2.2](https://img.shields.io/badge/Camunda%20Modeler-2.2+-blue.svg)](https://github.com/camunda/camunda-modeler)
 
-This example serves as a starting point for creating your own plugin for the [Camunda Modeler](https://github.com/camunda/camunda-modeler).
+This example is based on [Camunda Modeler Plugin Example](https://github.com/camunda/camunda-modeler-plugin-example/).
 
+## Features
+
+* Renders Robot Framework icon for service tasks with `robot` in their task id (case insensitive).
 
 ## Development Setup
 
@@ -35,19 +38,6 @@ To prepare the plug-in for release, executing all necessary steps, run:
 ```sh
 npm run all
 ```
-
-
-## Before you Publish
-
-* [ ] Clearly state which Camunda Modeler version your plug-in is compatible with
-* [ ] Ensure you renamed the [bpmn-js extension](./client/bpmn-js-extension/index.js#L17) from `PLEASE_CHANGE_ME` to something unique
-
-
-## Additional Resources
-
-* [List of existing plug-ins](https://github.com/camunda/camunda-modeler-plugins)
-* [Plug-ins documentation](https://github.com/camunda/camunda-modeler/tree/master/docs/plugins)
-
 
 ## Licence
 
