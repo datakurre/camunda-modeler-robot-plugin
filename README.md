@@ -41,6 +41,20 @@ To prepare the plug-in for release, executing all necessary steps, run:
 npm run all
 ```
 
+## Cockpit plugin
+
+The build results also a Camunda Cockpit compatible bpmn-js extension module at `./dist/module.js`. Please, follow the [Camunda Cockpit plugins guide](https://docs.camunda.org/manual/latest/webapps/cockpit/extend/plugins/) on how to copy `./dist/module.js` into a proper location depending on your Camunda distribution, and how to configure it as a bpmn-js extension, e.g.:
+
+```JSON
+  bpmnJs: {
+    additionalModules: [
+      'scripts/robot-module.js'
+    ],
+ }
+```
+
+![Robot Task at Camunda Cockpit](cockpit.png)
+
 ## Licence
 
 MIT

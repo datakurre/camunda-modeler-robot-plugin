@@ -4,9 +4,10 @@
   "description": "Robot Framework plugin for Camunda Modeler",
   "main": "index.js",
   "scripts": {
-    "all": "run-s bundle",
-    "bundle": "webpack",
-    "dev": "webpack -w",
+    "all": "run-s bundle bundle:module",
+    "bundle": "rollup -c rollup.config.js",
+    "bundle:module": "rollup -c module.rollup.config.js",
+    "dev": "rollup -w -c modeler.rollup.config.js",
     "prepublishOnly": "run-s bundle"
   },
   "repository": {
@@ -21,11 +22,16 @@
   "author": "Asko Soukka",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-image": "^2.0.6",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
     "camunda-modeler-plugin-helpers": "^3.1.0",
     "npm-run-all": "^4.1.5",
-    "svg-url-loader": "^7.1.1",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "rollup": "^2.35.1"
   },
   "dependencies": {
     "bpmn-js": "^8.0.0",

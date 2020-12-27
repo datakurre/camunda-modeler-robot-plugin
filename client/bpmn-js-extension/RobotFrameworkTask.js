@@ -1,4 +1,4 @@
-import inherits from 'inherits';
+import inherits from 'inherits/inherits_browser';
 import {
   is,
 } from 'bpmn-js/lib/util/ModelUtil';
@@ -8,7 +8,7 @@ import {
   create as svgCreate
 } from 'tiny-svg';
 
-import Robot from 'svg-url-loader!./robot-framework.svg';
+import Robot from './robot-framework.svg';
 
 import BaseRenderer from 'diagram-js/lib/draw/BaseRenderer';
 
