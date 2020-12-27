@@ -49,7 +49,7 @@ The build results also a Camunda Cockpit compatible bpmn-js extension module at 
   bpmnJs: {
     additionalModules: [
       'scripts/robot-module.js'
-    ],
+    ]
  }
 ```
 
