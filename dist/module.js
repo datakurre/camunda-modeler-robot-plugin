@@ -1,49 +1,3 @@
-/**
- * Validate and register a client plugin.
- *
- * @param {Object} plugin
- * @param {String} type
- */
-function registerClientPlugin(plugin, type) {
-  var plugins = window.plugins || [];
-  window.plugins = plugins;
-
-  if (!plugin) {
-    throw new Error('plugin not specified');
-  }
-
-  if (!type) {
-    throw new Error('type not specified');
-  }
-
-  plugins.push({
-    plugin: plugin,
-    type: type
-  });
-}
-/**
- * Validate and register a bpmn-js plugin.
- *
- * @param {Object} module
- *
- * @example
- *
- * import {
- *   registerBpmnJSPlugin
- * } from 'camunda-modeler-plugin-helpers';
- *
- * const BpmnJSModule = {
- *   __init__: [ 'myService' ],
- *   myService: [ 'type', ... ]
- * };
- *
- * registerBpmnJSPlugin(BpmnJSModule);
- */
-
-function registerBpmnJSPlugin(module) {
-  registerClientPlugin(module, 'bpmn.modeler.additionalModules');
-}
-
 function createCommonjsModule(fn) {
   var module = { exports: {} };
 	return fn(module, module.exports), module.exports;
@@ -477,9 +431,9 @@ function RobotRenderer(eventBus, bpmnRenderer) {
 inherits_browser(RobotRenderer, BaseRenderer);
 RobotRenderer.$inject = ['eventBus', 'bpmnRenderer'];
 
-var BpmnExtensionModule = {
+var index = {
   __init__: ['RobotFrameworkTask'],
   RobotFrameworkTask: ['type', RobotRenderer]
 };
 
-registerBpmnJSPlugin(BpmnExtensionModule);
+export default index;
