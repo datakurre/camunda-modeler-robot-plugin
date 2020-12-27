@@ -51,7 +51,8 @@ The build results also a Camunda Cockpit compatible bpmn-js extension module at 
     additionalModules: [
       'scripts/robot-module.js'
     ]
- }
+  }
+}
 ```
 
 ![Robot Task at Camunda Cockpit](cockpit.png)
