@@ -45,7 +45,7 @@ npm run all
 
 The build results also a Camunda Cockpit compatible bpmn-js extension module at `./dist/module.js`. Please, follow the [Camunda Cockpit plugins guide](https://docs.camunda.org/manual/latest/webapps/cockpit/extend/plugins/) on how to copy `./dist/module.js` into a proper location depending on your Camunda distribution, and how to configure it as a bpmn-js extension, e.g.:
 
-```json
+```js
 {
   bpmnJs: {
     additionalModules: [
