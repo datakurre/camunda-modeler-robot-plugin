@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = {
-  name: 'Example Plug-in',
+  name: 'Robot Framework',
   script: './dist/client.js'
 };
