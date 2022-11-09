@@ -7,8 +7,7 @@ import replace from "@rollup/plugin-replace";
 export default {
   input: "client/bpmn-js-extension/index.js",
   output: {
-    file: "dist/module.js",
-    format: "iife"
+    file: "dist/module.js"
   },
   plugins: [
     resolve(),
